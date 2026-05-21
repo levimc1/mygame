@@ -14,9 +14,14 @@ Egyszerű mint a minecraft Skriptelés, kivéve hogy itt te csinálod azt az
  - builtin modulok
 
  **Idegen fogalmak ebben**
+
  Tick alapú futtatás: Flag alapján dönt melyik System/Listener fut. (State) (FSM)
+
  builtin modulok: Ebben a verzióban csak Allocator, Window, Renderer, Input.
- Modul: Egy "rész" a pipeline-ban. Csak egy gépezet ami az adatból játékot csinál. 
+
+ Modul: 
+
+ Egy "rész" a pipeline-ban. Csak egy gépezet ami az adatból játékot csinál. 
         És azon a játékon futnak a Skriptjeid ahogy előbb említettem!
         Maga az adat amin operálnak ezek a motortól vagy a builtin-ektől származnak.
 
