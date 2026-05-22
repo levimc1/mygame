@@ -68,12 +68,8 @@ return struct {
 
     pub fn has(self: *Self, entity: Entity) bool {
         // Dolga röviden: Van-e ilyen entitáns a táblázatban?
-        // Ha Entitáns nagyobb mint sparse mérete > nincsen
-        // ha sparse[Entitáns] NULL > nincsen
         // ha lookup[sparse[entity]] == entity -> visszalinkel
 
-        if (entity >= self.sparse.items.len)                        return false;
-        if (self.sparse.items[entity] == NULL)                      return false; // Ez lehet szükségtelen.
         if (self.lookup.items[self.sparse.items[entity]] == entity) return true;
         return false; // Zig nem hiszi el különben. Vagy lehet problémás a logikám. 
     }
